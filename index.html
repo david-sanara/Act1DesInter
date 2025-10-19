@@ -408,6 +408,8 @@
 
         function cerrarModal() {
             document.getElementById("ventana-modal").style.display = "none";
+            clienteNombre = "";
+            clienteEmail = "";
         }
 
         // SCRIPTS PARA EL PREDATOR
@@ -448,13 +450,16 @@
             if (clienteNombre === "" || clienteEmail === "") {
                 alert('Por favor haga click en "Ver más" y rellene los datos.');
                 return;
-            } else
+            } else {
                 document.querySelector("#ventana-modal h2").textContent =
                     "Muchas gracias " + clienteNombre + ". Compra finalizada. Le enviaremos un email de confirmación a " + clienteEmail + ".";
-            document.getElementById("ventana-modal").style.display = "flex";
+                document.getElementById("ventana-modal").style.display = "flex";
+            }
         }
         function cerrarModal() {
             document.getElementById("ventana-modal").style.display = "none";
+            clienteNombre = "";
+            clienteEmail = "";
         }
 
         // console.log(descripcion1);
